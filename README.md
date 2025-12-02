@@ -1,71 +1,8 @@
 # Advanced-Twitter-Bot-Detection
-This project uses Machine Learning and Deep Learning models to detect whether a Twitter account is a bot or a human based on tweet content, engagement patterns, and account behavior.
+This project focuses on detecting Twitter bot accounts using machine learning and deep learning techniques. The goal is to analyze user behavior, tweet content, and engagement patterns to classify accounts as either bots or humans. The project uses two widely studied datasets: the Twitter Bot Detection Dataset and the CRESCI 2017 dataset. Both datasets contain labeled examples of genuine and bot accounts, which were used to train and evaluate multiple models.
 
-It includes traditional ML models, RNN models, and advanced Transformer models such as BERT, RoBERTa, XLNet, and T5.
+Several models were implemented and tested, including Random Forest, LSTM, GRU, BERT, RoBERTa, DistilBERT, XLNet, and T5. Each model was trained on processed data that included cleaned tweet text, numerical features such as follower counts and retweet counts, and engineered features that help identify bot-like behavior. The project also includes exploratory data analysis to understand trends within the datasets, such as common words, engagement levels, and correlations between features.
 
-🔍 Project Overview
+The results showed that transformer-based models such as BERT, RoBERTa, XLNet, and T5 performed extremely well on the structured CRESCI dataset, achieving high accuracy and strong classification results. Performance was lower on the real-world Twitter Bot Detection dataset due to noise, inconsistencies, and the increasingly human-like behavior of advanced bots. Traditional machine learning and RNN-based models achieved moderate accuracy but did not match the performance of transformer models on text-heavy classification tasks.
 
-Twitter has a growing problem with automated bot accounts.
-These bots spread misinformation, spam, and artificially boost online activity.
-
-This project builds a system that:
-
-Analyzes tweet text and user behavior
-
-Trains multiple ML and DL models
-
-Compares their performance
-
-Identifies which models work best for bot detection
-
-The project is based on the Twitter Bot Detection Dataset and the CRESCI 2017 Dataset, both widely used in research.
-
-🧠 Models Used
-
-The following models were trained and compared:
-
-✔ Machine Learning
-
-Random Forest
-
-✔ Deep Learning (RNNs)
-
-LSTM
-
-GRU
-
-✔ Transformer Models
-
-BERT
-
-RoBERTa
-
-DistilBERT
-
-XLNet
-
-T5-Small
-
-These models help understand both behavior patterns and textual patterns of bots.
-
-📊 Key Findings
-
-Transformer models performed best on structured datasets (up to 98–99% accuracy).
-
-Real-world Twitter data is noisy, and model accuracy dropped (around 50–76% depending on model).
-
-Bots show patterns like repeated language, abnormal retweet timing, and predictable interactions.
-
-📁 What’s Included in This Project
-
-Data preprocessing
-
-Exploratory Data Analysis (EDA)
-
-Feature extraction (text + numerical)
-
-Training scripts for all models
-
-Confusion matrices and evaluation results
-
-Visualizations (word clouds, heatmaps, engagement trends)
+This repository includes the full pipeline for Twitter bot detection, including preprocessing scripts, feature extraction, data visualization, model training, and model evaluation. It serves as a useful reference for researchers, students, and developers who want to understand or improve bot detection systems. The code can be extended, modified, or used as a starting point for building more advanced detection methods or experimenting with additional datasets.
